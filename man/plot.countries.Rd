@@ -39,6 +39,8 @@ continuous variable for fill}
 \item{style}{the style (passed to \code{classIntervals})}
 
 \item{palette}{the palette (selected in \code{scale_fill_brewer})}
+
+\item{bw}{a boolean, if \code{TRUE}, a black and white map is produced}
 }
 \value{
 a \code{gg} object.
