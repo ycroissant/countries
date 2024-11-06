@@ -65,7 +65,7 @@ NULL
 #' - legor: legal origin, one of 'french' and 'british'
 #' - gdp: log real gdp per capita in 2000
 #' - slaves: number of slaves
-#' - lslavesarea: log of the number of slaves divided by the country area
+#' - slavesarea: number of slaves divided by the country area
 #' - humidmax: average maximum humidity
 #' - rainmin: lowest month rainfall
 #' - lowtemp: average minimum temperature
@@ -76,7 +76,7 @@ NULL
 #' - indian: distance to the indian ocean
 #' - redsea: distance to the red sea
 #' - sahara: distance to sahara
-#' @source Nathan Nunn's website \url{https://scholar.harvard.edu/nunn}
+#' @source Nathan Nunn's website \url{http://scholar.harvard.edu/nunn}
 #' @references
 #' \insertRef{NUNN:08}{countries}
 #' @importFrom Rdpack reprompt

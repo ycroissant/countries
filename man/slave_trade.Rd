@@ -20,7 +20,7 @@ a tibble containing:
 \item legor: legal origin, one of 'french' and 'british'
 \item gdp: log real gdp per capita in 2000
 \item slaves: number of slaves
-\item lslavesarea: log of the number of slaves divided by the country area
+\item slavesarea: number of slaves divided by the country area
 \item humidmax: average maximum humidity
 \item rainmin: lowest month rainfall
 \item lowtemp: average minimum temperature
@@ -34,7 +34,7 @@ a tibble containing:
 }
 }
 \source{
-Nathan Nunn's website \url{https://scholar.harvard.edu/nunn}
+Nathan Nunn's website \url{http://scholar.harvard.edu/nunn}
 }
 \description{
 a cross-section of 52 countries from 2000

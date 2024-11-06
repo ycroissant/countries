@@ -382,6 +382,7 @@ labels.countries <- function(object, ..., var){
 #' @param n the number of class (passed to `classIntervals`)
 #' @param style the style (passed to `classIntervals`)
 #' @param palette the palette (selected in `scale_fill_brewer`)
+#' @param bw a boolean, if `TRUE`, a black and white map is produced
 #' @return a `gg` object.
 #' @importFrom sf st_set_geometry
 #' @importFrom ggplot2 ggplot aes geom_sf scale_fill_brewer guides
@@ -399,7 +400,9 @@ plot.countries <- function(x, ...,
                            bks = NULL,
                            n = 6,
                            style = NULL,
-                           palette = NULL){
+                           palette = NULL,
+                           bw = FALSE){
+    if (bw & is.null(palette)) palette <- "Greys"
     .bg <- attr(x, "bg")
     .bb <- attr(x, "bb")
     .type <- attr(x, "type")
@@ -431,9 +434,10 @@ plot.countries <- function(x, ...,
     if (length(setdiff(.labels, c("none", "country", "towns", "capital"))) > 0)
         stop("irrelevant value for labels")
     # create the plot with relevant fill
+    fill_oceans <- ifelse(bw, "white", "lightblue")
     aplot <- .bb %>%
         ggplot +
-        geom_sf(fill = "lightblue")
+        geom_sf(fill = fill_oceans)
     if (! is.null(.bg)) aplot <- aplot + geom_sf(data = .bg)
 
     if (! is.null(.fill)){

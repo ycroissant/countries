@@ -45,18 +45,19 @@ Earth](https://www.naturalearthdata.com/) website and use extensively
 packages^[In particular **ggrepel** [@SLOW:21] for labels and
 **classInt** [@BIVA:23] to compute automatically class intervals.].
 
-# What is a country ?
+# What is a country ? 
 
-This is a most difficult question that it seems. There are 193 member
-states of the United Nations and 2 general assembly observer states
-(Holly See and State of Palestine). 
-Some countries have dependencies which are often overseas territories,
-like for example French Polynesia and New Caledonia for France, which
-have a special status somewhere between a normal region and a
-sovereign state.
-Finally, it is convenient, at least as far as drawing maps is
-concerned, to cut some countries in different pieces, the main
-territory and some parts. Consider for example Spain. 
+This is a most difficult question that it seems.^[In @MASS:SOUT:23, a
+package that enables to download within **R** maps from naturalheart,
+there is a vignette on this question.] There are 193 member states of
+the United Nations and 2 general assembly observer states (Holly See
+and State of Palestine).  Some countries have dependencies which are
+often overseas territories, like for example French Polynesia and New
+Caledonia for France, which have a special status somewhere between a
+normal region and a sovereign state.  Finally, it is convenient, at
+least as far as drawing maps is concerned, to cut some countries in
+different pieces, the main territory and some parts. Consider for
+example Spain.
 
 ```{r echo = FALSE}
 sf::st_geometry(countries:::Spain) %>% plot
@@ -460,10 +461,10 @@ Labels can be added using the `labels` argument, which is a character
 that countains any combination of `"country"`, `"capital"` and
 `"towns"`. Moreover, for the names of the countries, 5 different
 languages are available. Here, we use the `lang` argument of
-`countries::countries` to display countries' names in Italian:
+`countries::countries` to display countries' names in Spanish:
 
 ```{r fig.height = 10, output.width = "70%"}
-countries("Europe", exclude = "Russia", capital = TRUE, lang = "it") %>%
+countries("Europe", exclude = "Russia", capital = TRUE, lang = "es") %>%
     plot(fill = "pop", capital = "income", n = 10, style = "pretty",
          palette = "Oranges", labels = "country") +
     labs(x = NULL, y = NULL) +

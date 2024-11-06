@@ -14,7 +14,8 @@
   bks = NULL,
   n = 6,
   style = NULL,
-  palette = NULL
+  palette = NULL,
+  bw = FALSE
 )
 }
 \arguments{
